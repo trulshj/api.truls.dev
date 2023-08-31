@@ -8,12 +8,16 @@ export default function Home() {
       <p className="my-2 text-xl">The valid endpoints are:</p>
 
       <ul className="flex flex-col gap-4">
+        <Endpoint method="GET" path="/just-say-ok">Always returns <ReturnCode code="200" />.</Endpoint>
         <Endpoint method="POST" path="/just-say-ok">Always returns <ReturnCode code="200" />.</Endpoint>
         <Endpoint method="POST" path="/echo">
           Returns the request body as the response body.
         </Endpoint>
         <Endpoint method="GET" path="/give-me/{returnCode}">
           Returns the given <code className="bg-slate-200">returnCode</code> as the HTTP status code.
+        </Endpoint>
+        <Endpoint method="GET" path="/dummy-array">
+          Returns an empty json array.
         </Endpoint>
       </ul>
     </div>
